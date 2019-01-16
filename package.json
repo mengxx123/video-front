@@ -11,13 +11,20 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "ass-to-srt": "^1.2.1",
     "axios": "^0.17.1",
     "module": "^1.2.5",
     "muse-ui": "^2.1.0",
+    "parse-srt": "^1.0.0-alpha",
     "qs": "^6.5.1",
+    "srt-to-ass": "^0.1.9",
+    "srt2smi": "^0.1.1",
+    "subtitle-utils": "^1.2.1",
+    "vtt2srt": "^0.1.1",
     "vue": "^2.5.2",
     "vue-router": "^3.0.1",
     "vue-server-renderer": "^2.5.9",
+    "vue-video-player": "^5.0.2",
     "yunser-ui-vue": "0.1.25"
   },
   "devDependencies": {

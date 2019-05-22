@@ -1,18 +1,20 @@
 <template>
     <my-page title="字幕格式转化" :page="page">
-        <textarea class="form-control" v-model="code" rows="6" placeholder="要编码/解码的内容"></textarea>
-        <select class="form-control charset" v-model="type">
-            <option value="srt2smi">SRT 转 SMI</option>
-            <option value="srt2txt">SRT 转 TXT</option>
-            <option value="srt2json">SRT 转 JSON</option>
-            <option value="srt2vtt">SRT 转 VTT</option>
-            <option value="ass2srt">ASS 转 SRT</option>
-            <option value="vtt2srt">VTT 转 SRT</option>
-        </select>
-        <div class="btns">
-            <ui-raised-button class="btn" primary label="转化" @click="convert" />
+        <div class="common-container container">
+            <textarea class="form-control" v-model="code" rows="6" placeholder="要编码/解码的内容"></textarea>
+            <select class="form-control charset" v-model="type">
+                <option value="srt2smi">SRT 转 SMI</option>
+                <option value="srt2txt">SRT 转 TXT</option>
+                <option value="srt2json">SRT 转 JSON</option>
+                <option value="srt2vtt">SRT 转 VTT</option>
+                <option value="ass2srt">ASS 转 SRT</option>
+                <option value="vtt2srt">VTT 转 SRT</option>
+            </select>
+            <div class="btns">
+                <ui-raised-button class="btn" primary label="转化" @click="convert" />
+            </div>
+            <textarea class="form-control" v-model="result" rows="6" placeholder="结果" disabled v-if="result"></textarea>
         </div>
-        <textarea class="form-control" v-model="result" rows="6" placeholder="结果" disabled v-if="result"></textarea>
     </my-page>
 </template>
 

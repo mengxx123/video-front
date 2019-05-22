@@ -1,19 +1,21 @@
 <template>
     <my-page title="追剧" :page="page">
-        <div class="empty-box" v-if="!list.length">列表为空，去添加你正在看的剧吧~</div>
-        <ul class="list">
-            <li class="item" v-for="item in list">
-                <div class="img">
-                    <ui-icon-button class="btn btn-add" icon="add" @click="addOne(item)" tooltip="看了一集" />
-                    <ui-icon-button class="btn btn-edit" icon="edit" @click="edit(item)" tooltip="编辑" />
-                    <ui-icon-button class="btn btn-link" icon="link" 
-                        v-if="item.url"
-                        @click="openUrl(item)" tooltip="打开连接" />
-                </div>
-                <div class="name">{{ item.name }}</div>
-                <div class="current">第 {{ item.current }} 集</div>
-            </li>
-        </ul>
+        <div class="common-container container">
+            <div class="empty-box" v-if="!list.length">列表为空，去添加你正在看的剧吧~</div>
+            <ul class="list">
+                <li class="item" v-for="item in list">
+                    <div class="img">
+                        <ui-icon-button class="btn btn-add" icon="add" @click="addOne(item)" tooltip="看了一集" />
+                        <ui-icon-button class="btn btn-edit" icon="edit" @click="edit(item)" tooltip="编辑" />
+                        <ui-icon-button class="btn btn-link" icon="link" 
+                            v-if="item.url"
+                            @click="openUrl(item)" tooltip="打开连接" />
+                    </div>
+                    <div class="name">{{ item.name }}</div>
+                    <div class="current">第 {{ item.current }} 集</div>
+                </li>
+            </ul>
+        </div>
         <ui-float-button class="float-btn" icon="add" @click="add"/>
     </my-page>
 </template>

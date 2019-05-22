@@ -1,19 +1,21 @@
 <template>
     <my-page title="视频截图">
-        <input class="file" id="file" type="file" @change="fileChange" />
-        <div v-if="loaded">
-            <video id="player" controls autoplay="autoplay"></video>
-            <br>
-            <ui-raised-button class="capture" label="截图" primary @click="capture" />
+        <div class="common-container container">
+            <input class="file" id="file" type="file" @change="fileChange" />
+            <div v-if="loaded">
+                <video id="player" controls autoplay="autoplay"></video>
+                <br>
+                <ui-raised-button class="capture" label="截图" primary @click="capture" />
+            </div>
+            <canvas id="canvas" class="canvas" style="display: none"></canvas>
+            <ul class="screenshot-list">
+                <li class="item" v-for="screenshot, index in screenshots" @click="removeItem(index)">
+                    <img class="img" :src="screenshot.image">
+                    <div class="time">{{ screenshot.time }}</div>
+                    <ui-icon-button class="close" icon="close" />
+                </li>
+            </ul>
         </div>
-        <canvas id="canvas" class="canvas" style="display: none"></canvas>
-        <ul class="screenshot-list">
-            <li class="item" v-for="screenshot, index in screenshots" @click="removeItem(index)">
-                <img class="img" :src="screenshot.image">
-                <div class="time">{{ screenshot.time }}</div>
-                <ui-icon-button class="close" icon="close" />
-            </li>
-        </ul>
         <!-- 捕捉（）张截图
         捕捉1张截图每隔（）秒
         开始时间

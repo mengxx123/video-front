@@ -1,10 +1,12 @@
 <template>
     <my-page title="编辑" :page="page" backable>
-        <ui-text-field v-model="detail.name" label="剧名" />
-        <br>
-        <ui-text-field v-model.number="detail.current" type="number" label="看到第几集" />
-        <br>
-        <ui-text-field v-model="detail.url" label="链接" />
+        <div class="common-container container">
+            <ui-text-field v-model="detail.name" label="剧名" />
+            <br>
+            <ui-text-field v-model.number="detail.current" type="number" label="看到第几集" />
+            <br>
+            <ui-text-field v-model="detail.url" label="链接" />
+        </div>
     </my-page>
 </template>
 

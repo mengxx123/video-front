@@ -1,21 +1,23 @@
 <template>
     <my-page title="播放器" :page="page">
-        <!-- <video class="" id="player" src="videoSrc" controls autoplay="autoplay" v-if="videoSrc"></video> -->
-        <div class="video-box">
-            <video-player class="video-player-box video-js vjs-big-play-centered"
-                    ref="player"
-                    :options="playerOptions"
-                    :playsinline="true"
-                    customEventName="customstatechangedeventname"
-                    v-if="playerOptions" />
-        </div>
+        <div class="common-container container">
+            <!-- <video class="" id="player" src="videoSrc" controls autoplay="autoplay" v-if="videoSrc"></video> -->
+            <div class="video-box">
+                <video-player class="video-player-box video-js vjs-big-play-centered"
+                        ref="player"
+                        :options="playerOptions"
+                        :playsinline="true"
+                        customEventName="customstatechangedeventname"
+                        v-if="playerOptions" />
+            </div>
 
-        <div class="file-box">
-            <input class="file" id="file" type="file" @change="fileChange" />
-            <br>
-            <ui-text-field v-model="url" label="视频链接" />
-            <br>
-            <ui-raised-button label="播放" primary @click="play" />
+            <div class="file-box">
+                <input class="file" id="file" type="file" @change="fileChange" />
+                <br>
+                <ui-text-field v-model="url" label="视频链接" />
+                <br>
+                <ui-raised-button label="播放" primary @click="play" />
+            </div>
         </div>
     </my-page>
 </template>

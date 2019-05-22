@@ -10,7 +10,6 @@ const SubtitleConvert = resolve => require(['@/views/SubtitleConvert'], resolve)
 const SubtitleConvertHelp = resolve => require(['@/views/SubtitleConvertHelp'], resolve)
 const List = resolve => require(['@/views/List'], resolve)
 const ListEdit = resolve => require(['@/views/ListEdit'], resolve)
-const About = resolve => require(['@/views/About'], resolve)
 const Error404 = resolve => require(['@/views/error/Error404'], resolve)
 
 Vue.use(Router)
@@ -51,10 +50,6 @@ let routes = [
     {
         path: '/list/edit',
         component: ListEdit
-    },
-    {
-        path: '/about',
-        component: About
     },
     {
         path: '*',

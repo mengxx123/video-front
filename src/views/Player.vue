@@ -38,17 +38,22 @@
                         {
                             type: 'icon',
                             icon: 'help',
-                            to: '/player/help'
+                            href: 'https://project.yunser.com/products/c056b64084eb11e988feeb2106d47d62',
+                            target: '_blank'
                         }
                     ]
                 }
             }
         },
         destroyed() {
-            this.player.dispose()
+            // this.player.dispose()
         },
         mounted() {
-            console.log('mounted')
+            let { data } = this.$route.query
+            if (data) {
+                this.url = data
+                this.playVideo(this.url)
+            }
         },
         methods: {
             play() {

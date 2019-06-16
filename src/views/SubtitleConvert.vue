@@ -65,7 +65,8 @@
                         {
                             type: 'icon',
                             icon: 'help',
-                            to: '/subtitle/convert/help',
+                            href: 'https://project.yunser.com/products/553ed44084ec11e988feeb2106d47d62',
+                            target: '_blank',
                             title: '帮助'
                         }
                     ]

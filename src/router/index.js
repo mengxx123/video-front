@@ -17,6 +17,7 @@ let routes = [
         path: '/',
         component: Home
     },
+    { path: '/camera', component: resolve => require(['@/views/Camera'], resolve) },
     {
         path: '/player',
         component: Player

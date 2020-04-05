@@ -7,6 +7,7 @@
 </template>
 
 <script>
+    /* eslint-disable */
     export default {
         data () {
             return {
@@ -75,6 +76,12 @@
                     {
                         name: '相机',
                         apps: [
+                            {
+                                name: '拍照',
+                                desc: '',
+                                icon: '/static/img/video.svg',
+                                to: '/camera'
+                            },
                             {
                                 name: '摄像头截图',
                                 desc: '',
